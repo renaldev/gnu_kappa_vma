@@ -1,0 +1,271 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolorfalse
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktexttrue
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+  \setlength{\unitlength}{0.0500bp}%
+  \begin{picture}(9070.00,4818.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,3419){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,3768){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,4118){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,4467){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,4817){\makebox(0,0)[r]{\strut{}1.0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(396,2849){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(752,2849){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1109,2849){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1465,2849){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1822,2849){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(2178,2849){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(2535,2849){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(1643,2519){\makebox(0,0){\strut{}(а)}}%
+      \put(574,3419){\makebox(0,0)[l]{\strut{}x=0 (1-й нагрев)}}%
+      \put(2748,2851){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+      \put(325,4957){\makebox(0,0)[l]{\strut{}$ \kappa/\kappa_{max} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,3422){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,3775){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,4128){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,4480){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3419,2849){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3775,2849){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4132,2849){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4488,2849){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4845,2849){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(5201,2849){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(5558,2849){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(4666,2519){\makebox(0,0){\strut{}(б)}}%
+      \put(4132,3951){\makebox(0,0)[l]{\strut{}x=0.6 (1-й нагрев)}}%
+      \put(5771,2849){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+      \put(3348,4974){\makebox(0,0)[l]{\strut{}$ \kappa/\kappa_{max} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,3414){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,3760){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,4105){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,4451){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,4796){\makebox(0,0)[r]{\strut{}1.0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6442,2849){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6799,2849){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7155,2849){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7512,2849){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7868,2849){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(8225,2849){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(8581,2849){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(7690,2519){\makebox(0,0){\strut{}(в)}}%
+      \put(7512,3933){\makebox(0,0)[l]{\strut{}x=0.6 (3-й нагрев)}}%
+      \put(8795,2853){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+      \put(6371,4935){\makebox(0,0)[l]{\strut{}$ \kappa/\kappa_{max} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,1014){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,1368){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,1723){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(264,2077){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(396,440){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(752,440){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1109,440){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1465,440){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(1822,440){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(2178,440){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(2535,440){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(1643,110){\makebox(0,0){\strut{}(г)}}%
+      \put(1180,1545){\makebox(0,0)[l]{\strut{}x=0.8 (1-й нагрев)}}%
+      \put(2748,439){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,981){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,1319){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,1656){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,1994){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3287,2332){\makebox(0,0)[r]{\strut{}1.0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3419,440){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(3775,440){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4132,440){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4488,440){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(4845,440){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(5201,440){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(5558,440){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(4666,110){\makebox(0,0){\strut{}(д)}}%
+      \put(4239,1656){\makebox(0,0)[l]{\strut{}x=0.8 (2-й нагрев)}}%
+      \put(5771,432){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,1010){\makebox(0,0)[r]{\strut{}0.2}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,1359){\makebox(0,0)[r]{\strut{}0.4}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,1709){\makebox(0,0)[r]{\strut{}0.6}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,2058){\makebox(0,0)[r]{\strut{}0.8}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6310,2408){\makebox(0,0)[r]{\strut{}1.0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6442,440){\makebox(0,0){\strut{} 0}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(6799,440){\makebox(0,0){\strut{} 100}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7155,440){\makebox(0,0){\strut{} 200}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7512,440){\makebox(0,0){\strut{} 300}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(7868,440){\makebox(0,0){\strut{} 400}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(8225,440){\makebox(0,0){\strut{} 500}}%
+      \colorrgb{0.00,0.00,0.00}%
+      \put(8581,440){\makebox(0,0){\strut{} 600}}%
+      \csname LTb\endcsname%
+      \put(7690,110){\makebox(0,0){\strut{}(е)}}%
+      \put(7155,1709){\makebox(0,0)[l]{\strut{}x=1.0 (1-й нагрев)}}%
+      \put(8795,442){\makebox(0,0)[l]{\strut{}$ T,{^oC} $}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{kappa-out}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

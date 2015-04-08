@@ -1,0 +1,18 @@
+set output "no15_ist.tex"
+			plot "no15_ist.dat" u 2:($4) every 1::2::852 t 'нагрев' w lines ls 1, "no15_ist.dat" u 2:($4) every 1::852 t 'охлаждение' w lines ls 2
+set output "no15b_ist.tex"
+			plot "no15b_ist.dat" u 2:($4) every 1::2::785 t 'нагрев' w lines ls 1, "no15b_ist.dat" u 2:($4) every 1::785 t 'охлаждение' w lines ls 2
+set output "no15c_ist.tex"
+			plot "no15c_ist.dat" u 2:($4) every 1::2::626 t 'нагрев' w lines ls 1, "no15c_ist.dat" u 2:($4) every 1::626 t 'охлаждение' w lines ls 2
+set output "no15d_ist.tex"
+			plot "no15d_ist.dat" u 2:($4) every 1::2::716 t 'нагрев' w lines ls 1, "no15d_ist.dat" u 2:($4) every 1::716 t 'охлаждение' w lines ls 2
+set output "no15e_ist.tex"
+			plot "no15e_ist.dat" u 2:($4) every 1::2::764 t 'нагрев' w lines ls 1, "no15e_ist.dat" u 2:($4) every 1::764 t 'охлаждение' w lines ls 2
+set output "no15esmola_irt.tex"
+			plot "no15esmola_irt.dat" u 2:($4) every 1::2::375 t 'нагрев' w lines ls 1, "no15esmola_irt.dat" u 2:($4) every 1::375 t 'охлаждение' w lines ls 2
+set output "no15f_ist.tex"
+			plot "no15f_ist.dat" u 2:($4) every 1::2::728 t 'нагрев' w lines ls 1, "no15f_ist.dat" u 2:($4) every 1::728 t 'охлаждение' w lines ls 2
+set output "no15g_ist.tex"
+			plot "no15g_ist.dat" u 2:($4) every 1::2::707 t 'нагрев' w lines ls 1, "no15g_ist.dat" u 2:($4) every 1::707 t 'охлаждение' w lines ls 2
+set output "no15h_ist.tex"
+			plot "no15h_ist.dat" u 2:($4) every 1::2::752 t 'нагрев' w lines ls 1, "no15h_ist.dat" u 2:($4) every 1::752 t 'охлаждение' w lines ls 2
